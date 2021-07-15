@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+/*------------header-------------*/
+header{
+    margin: 0;
+    height: 80px;
+    width:100%;
+    background-color:rgba(0,0,0,0.3);
+    position: fixed;
+    display: flex;
+}
+
+header h1{
+   color: white;
+   font-size: 60px;
+   font-weight: normal;
+   margin: 0;
+   line-height: 80px;
+}
+
+header ul{
+    margin: 0;
+
+}
+
+header ul li{
+    display:inline-flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: serif;
+    color: white;
+    line-height:80px;
+}
+
+
+/*----------ハンバーガーメニュー-----------*/
+#menubtn{
+    z-index: 1;
+    position: fixed;
+}
+
+
+#menubth img{
+    width: 100%;
+    max-width: 50px;
+}
+
+#hanmenu{
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+nav{
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px 3%;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-input:checked ~ nav{
+    display: block;
+    animation: 1s fadeIn;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0.3;}
+    to { opacity:1;}
+}
+.nav-hidden{
+    display: none;
+} 
+
+
+/*------------slide-------------*/
+.slide{
+    position: absolute;
+    top:0;
+}
+
+.slide li{
+    position:absolute;
+    list-style: none;
+    visibility: hidden;
+    animation: slideshow 15s 0s infinite;
+}
+
+.slide li:nth-of-type(2){
+    animation-delay:5s;
+}
+
+.slide li:nth-of-type(3){
+    animation-delay:10s;
+}
+
+@keyframes slideshow{
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    28%{
+        opacity: 1;
+    }
+    38%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/*------------footer-------------*/
+#footer{
+    clear: both;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-family: serif;
+    color: white;
+    background-color:black;
+    font-size: 30px;
+}
+
+/*------------html-------------*/
+html{
+    scroll-behavior:smooth;
+}
+:root{
+    background-color: rgba(253, 251, 251, 0.932);
+}
+
+
+
+/*------------menu-------------*/
+#menu{
+     width: 100%;
+}
+
+#menu ul{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+}
+
+#menu ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#menu ul li a{
+    display: block;
+    flex-wrap: wrap;
+    color: white;
+    font-size: auto;
+    font-family: serif;
+    height: 30px;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color:black;
+    border-color: white;
+    border: white;
+    border-bottom:3px solid white ;
+    border-top:3PX solid white ;
+    border-right:2px solid white;
+}
+
+#menu ul li a:hover{
+    filter: drop-shadow(10px 10px 10px gray);
+}
+
+
+
+/*------------main-------------*/
+#main{
+    clear: both;
+    float: right;
+    width:70%;
+    height: 40%;
+    background-image: url(mainhaikei.jpeg);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-top:solid 3px rgb(238, 225, 227);
+    border-left:solid 3px rgb(238, 225, 227);
+    border-bottom:solid 3px rgb(238, 225, 227);
+    border-right:solid 3px rgb(238, 225, 227);
+}
+
+#main h2{
+    color: seashell;
+    font-family: serif;
+    justify-content: center;
+    background-color: black;
+}
+
+#main p{
+    font-size: 20px;
+    font-family: serif;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#main .port{
+    margin: 0 0 30px 0;
+}
+
+
+#main .port .img .rigth{
+    background:url(../yakiniku2.jpeg) right top repeat-y; 
+}
+
+
+#main .port .img .left{
+    background:url(../yakiniku4.jpeg) right top repeat-y; 
+}
+
+
+.rigth{
+   float: right;
+}
+
+
+.left{
+    float: left;
+}
+
+/*------------side-------------*/
+#side{
+    margin: 10px;
+    width: 25%;
+    float: left;
+    background-image:url(sidehaikei1.jpeg);
+}
+
+#side .box{
+    margin: auto;
+    padding: auto;
+}
+
+#side .box h3{
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    font-family: serif;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: normal;
+    border-top:solid 3px grey;
+    border-right:solid 3px grey;
+    border-left:solid 3px grey;
+}
+
+#side .box .boxbody{
+    padding: 20px;
+    border-top:solid 3px grey;
+    border-right:solid 3px grey;
+    border-bottom:solid 3px grey;
+    border-left:solid 3px grey;
+}
+
+#side .box .boxbody ul{
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+#side .box .boxbody ul li{
+    font-size: 20px;
+    font-family: serif;
+    text-align: center;
+    padding: 8px 0 8px 4px;
+    list-style: none;
+    border-bottom: solid 3px grey;
+
+}
+
+/*------------画面サイズ変更-------------*/
